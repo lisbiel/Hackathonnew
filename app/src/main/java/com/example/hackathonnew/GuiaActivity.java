@@ -2,6 +2,7 @@ package com.example.hackathonnew;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -10,6 +11,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -37,6 +40,14 @@ public class GuiaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guia_activity);
         perdidosListView = findViewById(R.id.perdidosListView);
+
+        perdidosListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent it = new Intent(GuiaActivity.this, ChatActivity.class);
+                startActivity(it);
+            }
+            }
+        );
 
         perdidas = new ArrayList<PessoaPerdida>();
         listCreate(perdidas);
