@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".GuiaActivity"></activity>
+        <activity android:name=".PerdidaActivity"></activity>
     </application>
 
 </manifest>

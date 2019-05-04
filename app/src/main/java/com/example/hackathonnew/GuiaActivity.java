@@ -41,8 +41,6 @@ public class GuiaActivity extends AppCompatActivity {
         perdidas = new ArrayList<PessoaPerdida>();
         listCreate(perdidas);
 
-        int x;
-
         distance = 1000;
 
         perdidosAdapter =
