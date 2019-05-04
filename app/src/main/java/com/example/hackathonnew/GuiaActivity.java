@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListAdapter;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class GuiaActivity extends AppCompatActivity {
 
     private static final int REQUEST_PERMISSION_GPS = 1;
@@ -20,10 +22,24 @@ public class GuiaActivity extends AppCompatActivity {
 
     LocationListener locationListener;
 
+    ArrayList<PessoaPerdida> perdidas;
+
+    PerdidosAdapter perdidosAdapter;
+
+    int distance;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guia_activity);
+
+        perdidas = new ArrayList<PessoaPerdida>();
+        listCreate(perdidas);
+
+        distance = 1000;
+
+        perdidosAdapter =
+                new PerdidosAdapter(this, perdidas, distance);
 
         locationManager = (LocationManager)
                 getSystemService(Context.LOCATION_SERVICE);
@@ -55,7 +71,7 @@ public class GuiaActivity extends AppCompatActivity {
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
         ) == PackageManager.PERMISSION_GRANTED) {
-            //listCreate(perdidosLista);
+            perdidosAdapter.notifyDataSetChanged();
         } else {
             ActivityCompat.requestPermissions(
                     this,
@@ -67,6 +83,14 @@ public class GuiaActivity extends AppCompatActivity {
         }
     }
 
+    private void listCreate(ArrayList<PessoaPerdida> perdidas) {
+        perdidas.add(new PessoaPerdida("Renato Stefan", "Estação Sacomã", "Estação Carrão"));
+        perdidas.add(new PessoaPerdida("Cralos Otário", "Estação Mauá", "Estação Paulista"));
+        perdidas.add(new PessoaPerdida("Leonardo Vedovate", "Estação Mauá", "Estação Alto do Ipiranga"));
+        perdidas.add(new PessoaPerdida("Jośe Antônio", "Estação Ribeirão Pires", "Estação Brás"));
+        perdidas.add(new PessoaPerdida("Maria Roberta", "Estação Guapituba", "Estação Jundiaí"));
+    }
+
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == REQUEST_PERMISSION_GPS){
             if (grantResults.length > 0 &&
@@ -76,7 +100,7 @@ public class GuiaActivity extends AppCompatActivity {
                         this,
                         Manifest.permission.ACCESS_FINE_LOCATION
                 ) == PackageManager.PERMISSION_GRANTED){
-                    //listCreate(perdidosArray);
+                    perdidosAdapter.notifyDataSetChanged();
                 }
             }
             else{
