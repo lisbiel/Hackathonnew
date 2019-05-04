@@ -17,7 +17,7 @@ public class PerdidaActivity extends AppCompatActivity {
 
         encontrarguia.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent it = new Intent(PerdidaActivity.this, PerdidaActivity.class);
+                Intent it = new Intent(PerdidaActivity.this, AnimacaoActivity.class);
                 startActivity(it);
             }
         });
