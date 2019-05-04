@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
-        Button estouperdido = findViewById(R.id.estou_perdido);
+        Button estouPerdido = findViewById(R.id.estou_perdido);
 
-        souGuia.setOnClickListener(new View.OnClickListener() {
+        estouPerdido.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent it = new Intent(MainActivity.this, GuiaActivity.class);
                 startActivity(it);
