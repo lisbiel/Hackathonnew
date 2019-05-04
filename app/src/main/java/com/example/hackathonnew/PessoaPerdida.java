@@ -3,6 +3,8 @@ package com.example.hackathonnew;
 public class PessoaPerdida {
     private String nome;
     private String partida;
+    private String chegada;
+
 
     public String getNome() {
         return nome;
@@ -21,18 +23,20 @@ public class PessoaPerdida {
     }
 
     public String getChegada() {
-        return Chegada;
+        return chegada;
     }
 
     public void setChegada(String chegada) {
-        Chegada = chegada;
+        chegada = chegada;
     }
 
     public PessoaPerdida(String nome, String partida, String chegada) {
         this.nome = nome;
         this.partida = partida;
-        Chegada = chegada;
+        this.chegada = chegada;
     }
 
-    private String Chegada;
+
+
+
 }
