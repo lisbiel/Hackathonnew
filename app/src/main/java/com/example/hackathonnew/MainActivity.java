@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         souGuia.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent it = new Intent(MainActivity.this, PessoaPerdida.class);
+                Intent it = new Intent(MainActivity.this, PerdidaActivity.class);
                 startActivity(it);
             }
         });

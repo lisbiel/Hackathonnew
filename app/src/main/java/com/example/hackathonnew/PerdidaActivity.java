@@ -1,12 +1,14 @@
 package com.example.hackathonnew;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class PerdidaActivity {
+public class PerdidaActivity extends AppCompatActivity {
 
-
-    protected void onCreate(Bundle savedInstanceState){
-
+    @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
 
     }
 }
