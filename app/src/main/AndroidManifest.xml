@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hackathonnew">
+    package="com.forcadoodio.meguia">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,17 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.forcadoodio.meguia.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GuiaActivity"></activity>
-        <activity android:name=".PerdidaActivity"></activity>
-        <activity android:name=".AnimacaoActivity"></activity>
-        <activity android:name=".ChatActivity"></activity>
+        <activity android:name="com.forcadoodio.meguia.GuiaActivity"></activity>
+        <activity android:name="com.forcadoodio.meguia.PerdidaActivity"></activity>
+        <activity android:name="com.forcadoodio.meguia.AnimacaoActivity"></activity>
+        <activity android:name="com.forcadoodio.meguia.ChatActivity"></activity>
     </application>
 
 </manifest>

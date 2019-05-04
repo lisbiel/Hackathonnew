@@ -1,4 +1,4 @@
-package com.example.hackathonnew;
+package com.forcadoodio.meguia;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

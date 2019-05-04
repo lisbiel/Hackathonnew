@@ -1,4 +1,4 @@
-package com.example.hackathonnew;
+package com.forcadoodio.meguia;
 
 import android.Manifest;
 import android.content.Context;
@@ -13,7 +13,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -102,8 +101,8 @@ public class GuiaActivity extends AppCompatActivity {
 
     private void listCreate(ArrayList<PessoaPerdida> perdidas) {
         perdidas.add(new PessoaPerdida("Renato Stefan", "Estação Sacomã", "Estação Carrão"));
-        perdidas.add(new PessoaPerdida("Cralos Otário", "Estação Mauá", "Estação Paulista"));
-        perdidas.add(new PessoaPerdida("Leonardo Vedovate", "Estação Mauá", "Estação Alto do Ipiranga"));
+        perdidas.add(new PessoaPerdida("Cralos Otávio", "Estação Mauá", "Estação Paulista"));
+        perdidas.add(new PessoaPerdida("Leonardo Vedovate", "Estação Mauá", "Alto do Ipiranga"));
         perdidas.add(new PessoaPerdida("Jośe Antônio", "Estação Ribeirão Pires", "Estação Brás"));
         perdidas.add(new PessoaPerdida("Maria Roberta", "Estação Guapituba", "Estação Jundiaí"));
     }

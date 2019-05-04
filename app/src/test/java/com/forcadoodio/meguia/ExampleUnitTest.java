@@ -1,4 +1,4 @@
-package com.example.hackathonnew;
+package com.forcadoodio.meguia;
 
 import org.junit.Test;
 

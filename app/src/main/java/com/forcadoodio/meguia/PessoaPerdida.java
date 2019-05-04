@@ -1,4 +1,4 @@
-package com.example.hackathonnew;
+package com.forcadoodio.meguia;
 
 public class PessoaPerdida {
     private String nome;
