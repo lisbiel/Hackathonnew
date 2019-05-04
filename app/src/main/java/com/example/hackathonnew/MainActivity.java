@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         souGuia.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent it = new Intent(MainActivity.this, PerdidaActivity.class);
+                Intent it = new Intent(MainActivity.this, GuiaActivity.class);
                 startActivity(it);
             }
         });
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         estouPerdido.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent it = new Intent(MainActivity.this, GuiaActivity.class);
+                Intent it = new Intent(MainActivity.this, PerdidaActivity.class);
                 startActivity(it);
             }
         });

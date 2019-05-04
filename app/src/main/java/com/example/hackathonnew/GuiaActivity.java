@@ -46,7 +46,6 @@ public class GuiaActivity extends AppCompatActivity {
         perdidosAdapter =
                 new PerdidosAdapter(this, perdidas, distance);
 
-        perdidosListView.setAdapter(perdidosAdapter);
         locationManager = (LocationManager)
                 getSystemService(Context.LOCATION_SERVICE);
 
@@ -77,6 +76,7 @@ public class GuiaActivity extends AppCompatActivity {
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
         ) == PackageManager.PERMISSION_GRANTED) {
+            perdidosListView.setAdapter(perdidosAdapter);
             perdidosAdapter.notifyDataSetChanged();
         } else {
             ActivityCompat.requestPermissions(
@@ -106,6 +106,7 @@ public class GuiaActivity extends AppCompatActivity {
                         this,
                         Manifest.permission.ACCESS_FINE_LOCATION
                 ) == PackageManager.PERMISSION_GRANTED){
+                    perdidosListView.setAdapter(perdidosAdapter);
                     perdidosAdapter.notifyDataSetChanged();
                 }
             }
