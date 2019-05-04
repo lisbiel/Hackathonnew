@@ -13,7 +13,7 @@ public class PerdidaActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.cadastro_pessoa_perdida);
 
-        Button encontrarguia = findViewById(R.id.estou_perdido);
+        Button encontrarguia = findViewById(R.id.encontrar_guia);
 
         encontrarguia.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
