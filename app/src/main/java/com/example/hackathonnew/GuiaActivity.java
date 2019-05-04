@@ -23,7 +23,7 @@ public class GuiaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.guia_activity);
 
         locationManager = (LocationManager)
                 getSystemService(Context.LOCATION_SERVICE);
@@ -55,7 +55,7 @@ public class GuiaActivity extends AppCompatActivity {
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
         ) == PackageManager.PERMISSION_GRANTED) {
-            //ListAdapter(perdidosLista);
+            //listCreate(perdidosLista);
         } else {
             ActivityCompat.requestPermissions(
                     this,
@@ -76,7 +76,7 @@ public class GuiaActivity extends AppCompatActivity {
                         this,
                         Manifest.permission.ACCESS_FINE_LOCATION
                 ) == PackageManager.PERMISSION_GRANTED){
-                    //ListAdapter(perdidosLista);
+                    //listCreate(perdidosArray);
                 }
             }
             else{
