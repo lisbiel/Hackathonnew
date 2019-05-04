@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -26,12 +27,16 @@ public class GuiaActivity extends AppCompatActivity {
 
     PerdidosAdapter perdidosAdapter;
 
+    ListView perdidosListView;
+
     int distance;
+    private Object PerdidosAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guia_activity);
+        perdidosListView = findViewById(R.id.perdidosListView);
 
         perdidas = new ArrayList<PessoaPerdida>();
         listCreate(perdidas);
@@ -41,6 +46,7 @@ public class GuiaActivity extends AppCompatActivity {
         perdidosAdapter =
                 new PerdidosAdapter(this, perdidas, distance);
 
+        perdidosListView.setAdapter(perdidosAdapter);
         locationManager = (LocationManager)
                 getSystemService(Context.LOCATION_SERVICE);
 
