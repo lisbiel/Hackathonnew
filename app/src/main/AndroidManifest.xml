@@ -21,6 +21,7 @@
         </activity>
         <activity android:name=".GuiaActivity"></activity>
         <activity android:name=".PerdidaActivity"></activity>
+        <activity android:name=".AnimacaoActivity"></activity>
         <activity android:name=".ChatActivity"></activity>
     </application>
 
